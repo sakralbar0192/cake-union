@@ -1,52 +1,57 @@
 <header class="page-header container">
-   <a class="page-header__logo">
+   <a href="#" class="page-header__logo">
       <picture>
          <source type="image/webp" srcset="assets/images/static/logo.webp">
          <img src="assets/images/static/logo.png" alt="Логотип" width="74" height="57">
       </picture>      
    </a>
-   <nav class="page-header__nav">
-      <ul class="page-header__nav-list">
-         <li class="page-header__nav-item">
-            <a href="#" class="page-header__nav-list-link">
-               Меню
+   <div class="page-header__menu" id="menu">
+      <button class="page-header__menu-toggle" id="toggle">
+         <span></span>
+      </button>
+      <nav class="page-header__nav">
+         <ul class="page-header__nav-list">
+            <li class="page-header__nav-item">
+               <a href="#" class="page-header__nav-list-link">
+                  Меню
+               </a>
+            </li>
+            <li class="page-header__nav-item">
+               <a href="#" class="page-header__nav-list-link">
+                  Целые торты
+               </a>
+            </li>
+         </ul>
+         <ul class="page-header__nav-list page-header__nav-list--right-list">
+            <li class="page-header__nav-item">
+               <a href="#" class="page-header__nav-list-link">
+                  Программа лояльности
+               </a>
+            </li>
+            <li class="page-header__nav-item">
+               <a href="#" class="page-header__nav-list-link">
+                  Контакты
+               </a>
+            </li>
+         </ul>
+      </nav>
+      <ul class="page-header__social">
+         <li class="page-header__social-item">
+            <a href="#" class="page-header__social-link">
+               <picture>
+                  <source type="image/webp" srcset="assets/images/static/instagram-icon.webp">
+                  <img src="assets/images/static/instagram-icon.png" alt="Инстаграм" width="20" height="20">
+               </picture> 
             </a>
          </li>
-         <li class="page-header__nav-item">
-            <a href="#" class="page-header__nav-list-link">
-               Целые торты
+         <li class="page-header__social-item">
+            <a href="#" class="page-header__social-link">
+               <picture>
+                  <source type="image/webp" srcset="assets/images/static/vkontakte-icon.webp">
+                  <img src="assets/images/static/vkontakte-icon.png" alt="Вконтакте" width="20" height="20">
+               </picture> 
             </a>
          </li>
       </ul>
-      <ul class="page-header__nav-list page-header__nav-list--right-list">
-         <li class="page-header__nav-item">
-            <a href="#" class="page-header__nav-list-link">
-               Программа лояльности
-            </a>
-         </li>
-         <li class="page-header__nav-item">
-            <a href="#" class="page-header__nav-list-link">
-               Контакты
-            </a>
-         </li>
-      </ul>
-   </nav>
-   <ul class="page-header__social">
-      <li class="page-header__social-item">
-         <a href="#" class="page-header__social-link">
-            <picture>
-               <source type="image/webp" srcset="assets/images/static/instagram-icon.webp">
-               <img src="assets/images/static/instagram-icon.png" alt="Инстаграм" width="20" height="20">
-            </picture> 
-         </a>
-      </li>
-      <li class="page-header__social-item">
-         <a href="#" class="page-header__social-link">
-            <picture>
-               <source type="image/webp" srcset="assets/images/static/vkontakte-icon.webp">
-               <img src="assets/images/static/vkontakte-icon.png" alt="Вконтакте" width="20" height="20">
-            </picture> 
-         </a>
-      </li>
-   </ul>
+   </div>   
 </header>

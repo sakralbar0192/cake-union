@@ -1,5 +1,8 @@
 .hero-block {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &::after,
   &::before {
@@ -22,6 +25,12 @@
 }
 
 .hero-block__hero-image-wrapper {
+  
+
+  img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .hero-block__text {
@@ -41,6 +50,8 @@
   letter-spacing: -0.44px;
   text-transform: uppercase;
   color: $primary-color;
+  text-align: center;
+  z-index: 2;
 }
 
 .hero-block__big-logo-wrapper {

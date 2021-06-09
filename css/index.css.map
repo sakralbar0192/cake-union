@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../src/assets/styles/6_patterns/index.scss",
+        "../src/assets/styles/6_patterns/_404.scss"
+    ],
+    "names": [],
+    "file": "index.css"
+}
