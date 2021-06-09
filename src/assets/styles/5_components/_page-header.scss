@@ -69,16 +69,21 @@
 }
 
 .page-header__nav {
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   height: 100%;
-   margin: 0 0 0 80px;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   column-gap: 160px;
+   height: 100%;  
+   margin: 0 60px; 
 }
 
 .page-header__nav-list {
    display: flex;  
-   margin: 0 77px;   
+   flex-wrap: wrap;
+   justify-content: flex-end;  
+   
+   &--right-list {
+      justify-content: flex-start;
+   }
 }
 
 .page-header__nav-item {
@@ -89,6 +94,7 @@
    @include fontStyleOne;
    padding: 8px;
    color: $primary-color;
+   white-space: nowrap;
 }
 
 .page-header__social {
