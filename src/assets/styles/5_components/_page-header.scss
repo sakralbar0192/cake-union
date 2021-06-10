@@ -1,52 +1,3 @@
-// a{
-//    text-decoration: none;
-//    color: red;
-// }
-
-// li:hover{
-//    color: #26547c;
-//    border-bottom: 5px solid #ffd166;
-//    opacity: 0.5;
-//    padding-bottom: 5px;
-// }
-
-//  nav a{
-//    font-family: GothamPro;g
-//    font-size: 14px;
-//    line-height: 22px;
-//    color: #26547c;
-//  }
-
-//  .header {
-//    margin-top: 35px;
-//    width: 100%;
-//    &__menu li{
-//       display: inline;
-//       margin-right: 35px;
-      
-//    }
-//    &__menu {
-//       width: 100%;
-//       max-width: 1000px;
-//       margin: auto;
-//       display: flex;
-//       justify-content: space-around;
-//       align-items: row;
-//       flex-direction: row;
-
-//    }
-
-//    &__social {
-//       display: flex;
-//       justify-content: flex-end;
-//       flex-direction: row;
-//       align-items: center;
-//       margin: auto;
-//       width: 100%;
-//    }
-// }
-
-
 .page-header {
    position: relative; 
    display: flex;
@@ -63,6 +14,14 @@
    height: 57px;
    margin: auto; 
    z-index: 11;
+
+   &:hover {
+      opacity: 0.7;
+   }
+
+   &:active {
+      opacity: 0.3;
+   }
 }
 
 .page-header__menu-toggle {
@@ -98,9 +57,20 @@
 
 .page-header__nav-list-link {
    @include fontStyleOne;
-   padding: 8px;
+   box-sizing: border-box;
+   display: block;
+   padding: 4px 8px;
    color: $primary-color;
    white-space: nowrap;
+
+   &:hover {
+      padding: 4px 8px 0;
+      border-bottom: 4px solid $accent-color;
+   }
+
+   &:active {
+      opacity: 0.5;
+   }
 }
 
 .page-header__social {
@@ -111,7 +81,17 @@
 }
 
 .page-header__social-item {
-   margin: 10px 4px 0;
+   margin: 0 4px 0;
+}
+
+.page-header__social-link {
+   &:hover {
+      opacity: 0.7;
+   }
+
+   &:active {
+      opacity: 0.3;
+   }
 }
 
 @media (max-width: map-get($tablet, lg) - 1) {
@@ -137,7 +117,7 @@
 
    .page-header__nav-list {
       flex-direction: column;
-      align-items: center;
+      align-items: center; 
    }
 
    .page-header__menu._active {
@@ -237,10 +217,7 @@
             top: initial;
             left: 0; 
             right: 0;          
-         }
-         
+         }         
       }
-
    }
-
 }

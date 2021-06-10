@@ -1,0 +1,161 @@
+.flying-cakes-block {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 580px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;    
+    width: 103px;
+    height: 103px;
+    margin: auto;
+    background: url("assets/images/static/decor-donut.png") center no-repeat;
+  }
+}
+
+.flying-cakes-block__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1920px;
+  padding: 0 140px 0 205px;
+}
+
+.flying-cakes-block__list-item {
+  position: relative;
+  height: 100%;  
+
+  &:hover .flying-cakes-block__info-popup {
+    display: flex;   
+  }
+
+  &:nth-child(1),
+  &:nth-child(5) {
+    width: 240px;
+
+    .flying-cakes-block__image-wrapper {   
+      top: 10px;   
+      height: 210px; 
+      animation-duration: 10s;     
+    }    
+  }
+
+  &:nth-child(1) {
+    .flying-cakes-block__image-wrapper {
+      left: 30px;
+    }
+
+    .flying-cakes-block__info-popup {
+      top: 60px;
+      right: -150px;
+    }
+  }
+
+  &:nth-child(5) {
+    .flying-cakes-block__image-wrapper {
+      right: 60px;
+    }
+
+    .flying-cakes-block__info-popup {
+      top: 60px;
+      left: -150px;
+    }
+  }
+
+  &:nth-child(3) {
+    width: 340px;
+    margin: 0 50px 0 45px;
+
+    .flying-cakes-block__image-wrapper { 
+      bottom: -40px;
+      height: 350px;
+      animation-duration: 8s; 
+    }    
+
+    .flying-cakes-block__info-popup {
+      top: 180px;
+    }
+  }
+
+  &:nth-child(2n) {
+    width: 300px;
+
+    .flying-cakes-block__image-wrapper  {      
+      bottom: 112px;
+      height: 300px;   
+      animation-duration: 9s;               
+    }    
+  }  
+
+  &:nth-child(2) {
+    .flying-cakes-block__info-popup {
+      top: 100px;
+      right: -103px;
+    }    
+  }
+
+  &:nth-child(4) {
+    .flying-cakes-block__info-popup {
+      top: 100px;
+      left: -103px;
+    }
+  }
+}
+
+.flying-cakes-block__image-wrapper {
+  position: absolute; 
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  width: 100%;
+  overflow: hidden;  
+  animation-name: swing;
+  animation-iteration-count: infinite;  
+  z-index: -1;
+}
+
+.flying-cakes-block__info-popup {
+  box-sizing: border-box;
+  position: absolute;
+  display: none;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  width: 282px;
+  padding: 30px 23px 15px;    
+  background: rgba($additional-color, 0.7);
+  border: 1px solid $additional-color-two;
+
+  h3,
+  p,
+  span {    
+    font-family: "Lato";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: $primary-color;
+    letter-spacing: -0.36px;
+  }
+
+  h3 {
+    flex-grow: 1;
+    font-weight: bold;
+    margin: 0 0 10px;
+    font-family: "Gotham Pro";    
+    font-size: 20px; 
+    letter-spacing: -0.36px;
+  }  
+
+  p {
+    margin: 0 0 15px;
+    letter-spacing: -0.32px;
+  }
+
+  span {
+    margin: 0 0 0 25px;
+    font-size: 18px;
+  }
+}

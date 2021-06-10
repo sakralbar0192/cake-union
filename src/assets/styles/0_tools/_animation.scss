@@ -1,7 +1,11 @@
-@keyframes fade {
-    from ,
-    to {
-    top: 0;
-    opacity: 1;
+@keyframes swing {
+    0% {
+      transform: translateY(-10%);
     }
-}
+    50% {
+      transform: translateY(20%);
+    }
+    100% {
+      transform: translateY(-10%);
+    }
+  }

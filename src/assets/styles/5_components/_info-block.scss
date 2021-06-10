@@ -1,0 +1,63 @@
+.info-block {
+  box-sizing: border-box;
+  position: relative;
+  width: 700px;
+  margin: auto;
+  padding: 53px 90px;
+  border: 1px solid $accent-color;
+  border-radius: 50px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;    
+    width: 42px;
+    height: 42px;
+    margin: auto;
+    border: 1px solid $accent-color;
+    border-radius: 50%;
+  }
+
+  &::before {
+    left: -21px;   
+  }
+
+  &::after {
+    right: -21px;
+  }
+}
+
+.info-block__text {
+  @include fontStyleTwo;
+  font-family: "Verdana";
+  text-align: center;
+}
+
+.info-block__button {
+  @include fontStyleTwo;
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: 4px 20px;
+  font-family: "Lato";  
+  background: $accent-color;
+  border: 0;
+  border-radius: 14px;
+  z-index: 20;
+  
+  &:hover {
+    opacity: 0.7
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
