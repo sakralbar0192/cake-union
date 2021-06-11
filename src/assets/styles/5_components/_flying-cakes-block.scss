@@ -3,6 +3,7 @@
   display: flex;
   justify-content: center;
   height: 580px;
+  margin: 0 0 110px;
 
   &::before {
     content: "";
@@ -141,10 +142,10 @@
   }
 
   h3 {
-    flex-grow: 1;
-    font-weight: bold;
+    flex-grow: 1;    
     margin: 0 0 10px;
-    font-family: "Gotham Pro";    
+    font-family: "Gotham Pro";
+    font-weight: bold;    
     font-size: 20px; 
     letter-spacing: -0.36px;
   }  

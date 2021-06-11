@@ -121,44 +121,6 @@
    }
 
    .page-header__menu._active {
-
-      .page-header__nav {
-         display: none;
-      }
-
-      .page-header__social {
-         display: none;
-      }     
-      
-      .page-header__menu-toggle {
-         position: absolute;
-         top: 55px;
-         right: 50px;
-         display: flex;
-         flex-direction: column;
-         justify-content: space-between;
-         width: 30px;
-         height: 18px;
-         padding: 0;
-         background: inherit;
-         border: 0;
-
-
-         &::before,
-         span,
-         &::after {            
-            background: $secondary-color;
-            width: 100%;
-            height: 2px;
-            transition: all 0.3s ease 0s;
-         }
-
-         &::before,
-         &::after {
-            content: "";
-         }
-      }
-
       .page-header__menu-wrapper {
          position: absolute;
          top: 50px;

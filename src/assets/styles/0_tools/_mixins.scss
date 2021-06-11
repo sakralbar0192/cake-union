@@ -9,9 +9,18 @@
 }
 
 @mixin fontStyleTwo {  
+  font-family: "Verdana";
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
-  letter-spacing: -0.28px;
+  letter-spacing: -0.32px;
   color: $primary-color;
+}
+
+@mixin fontStyleThree {
+  font-family: "Junegull";
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 22px;
+  letter-spacing: -0.48px;  
 }
