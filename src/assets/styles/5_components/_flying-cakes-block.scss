@@ -2,7 +2,7 @@
   position: relative;
   display: flex;
   justify-content: center;
-  height: 580px;
+  min-height: 580px;
   margin: 0 auto 110px;
 
   &::before {
@@ -15,6 +15,7 @@
     height: 103px;
     margin: auto;
     background: url("assets/images/static/decor-donut.png") center no-repeat;
+    z-index: 1;
   }
 }
 
@@ -22,89 +23,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 1920px;
-  padding: 0 140px 0 205px;
-}
-
-.flying-cakes-block__list-item {
-  position: relative;
-  height: 100%;  
-
-  &:hover .flying-cakes-block__info-popup {
-    display: flex;   
-  }
-
-  &:nth-child(1),
-  &:nth-child(5) {
-    width: 240px;
-
-    .flying-cakes-block__image-wrapper {   
-      top: 10px;   
-      height: 210px; 
-      animation-duration: 10s;     
-    }    
-  }
-
-  &:nth-child(1) {
-    .flying-cakes-block__image-wrapper {
-      left: 30px;
-    }
-
-    .flying-cakes-block__info-popup {
-      top: 60px;
-      right: -150px;
-    }
-  }
-
-  &:nth-child(5) {
-    .flying-cakes-block__image-wrapper {
-      right: 60px;
-    }
-
-    .flying-cakes-block__info-popup {
-      top: 60px;
-      left: -150px;
-    }
-  }
-
-  &:nth-child(3) {
-    width: 340px;
-    margin: 0 50px 0 45px;
-
-    .flying-cakes-block__image-wrapper { 
-      bottom: -40px;
-      height: 350px;
-      animation-duration: 8s; 
-    }    
-
-    .flying-cakes-block__info-popup {
-      top: 180px;
-    }
-  }
-
-  &:nth-child(2n) {
-    width: 300px;
-
-    .flying-cakes-block__image-wrapper  {      
-      bottom: 112px;
-      height: 300px;   
-      animation-duration: 9s;               
-    }    
-  }  
-
-  &:nth-child(2) {
-    .flying-cakes-block__info-popup {
-      top: 100px;
-      right: -103px;
-    }    
-  }
-
-  &:nth-child(4) {
-    .flying-cakes-block__info-popup {
-      top: 100px;
-      left: -103px;
-    }
-  }
+  margin: 0 auto;
+  padding: 0 10px 0 80px;
 }
 
 .flying-cakes-block__image-wrapper {
@@ -113,8 +33,7 @@
   align-items: center;
   justify-content: center; 
   width: 100%;
-  overflow: hidden;  
-  animation-name: swing;
+  overflow: hidden;    
   animation-iteration-count: infinite;  
   z-index: -1;
 }
@@ -158,5 +77,169 @@
   span {
     margin: 0 0 0 25px;
     font-size: 18px;
+  }
+}
+
+@media (max-width: map-get($laptop, lg) - 1) {
+  .flying-cakes-block__list-item {
+    &:nth-child(1),
+    &:nth-child(5) {
+      display: none;
+    }
+  }
+};
+
+@media (max-width: map-get($laptop, sm) - 1) {
+  .flying-cakes-block__list {
+    padding: 0;
+  }
+
+  .flying-cakes-block__list-item {
+    &:nth-child(3) {
+      margin: 0;
+    }
+  }
+}
+
+@media (min-width: map-get($tablet, lg)) {
+  .flying-cakes-block__list-item {
+    position: relative;
+    min-height: 500px;  
+  
+    &:hover .flying-cakes-block__info-popup {
+      display: flex;   
+    }
+  
+    &:nth-child(1),
+    &:nth-child(5) {
+      width: 240px;
+  
+      .flying-cakes-block__image-wrapper {   
+        top: 10px;   
+        height: 210px; 
+        animation-duration: 10s;     
+      }    
+    }
+  
+    &:nth-child(1) {
+      .flying-cakes-block__image-wrapper {
+        left: 30px;
+      }
+  
+      .flying-cakes-block__info-popup {
+        top: 60px;
+        right: -150px;
+      }
+    }
+  
+    &:nth-child(5) {
+      .flying-cakes-block__image-wrapper {
+        right: 60px;
+      }
+  
+      .flying-cakes-block__info-popup {
+        top: 60px;
+        left: -150px;
+      }
+    }
+  
+    &:nth-child(3) {
+      width: 340px;
+      margin: 0 50px 0 45px;
+  
+      .flying-cakes-block__image-wrapper { 
+        bottom: -40px;
+        height: 350px;
+        animation-duration: 8s; 
+      }    
+  
+      .flying-cakes-block__info-popup {
+        top: 180px;
+      }
+    }
+  
+    &:nth-child(2n) {
+      width: 300px;
+  
+      .flying-cakes-block__image-wrapper  {      
+        bottom: 112px;
+        height: 300px;   
+        animation-duration: 9s;               
+      }    
+    }  
+  
+    &:nth-child(2) {
+      .flying-cakes-block__info-popup {
+        top: 100px;
+        right: -103px;
+      }    
+    }
+  
+    &:nth-child(4) {
+      .flying-cakes-block__info-popup {
+        top: 100px;
+        left: -103px;
+      }
+    }
+  }
+
+  .flying-cakes-block__image-wrapper {
+    animation-name: swing;
+  }
+}
+
+@media (max-width: map-get($tablet, lg)-1) {
+  .flying-cakes-block__list {
+    flex-wrap: wrap;
+    padding: 170px 10px 0;
+
+  }
+
+  .flying-cakes-block__list-item {
+    position: relative;
+    min-height: 0;
+    padding: 0 0 30px;
+
+    &:nth-child(1) {
+      order: 1;
+      display: block;
+    }
+
+    &:nth-child(2) {
+      order: 4;
+    }
+
+    &:nth-child(3) {
+      order: 2;
+    }
+
+    &:nth-child(4) {
+      order: 5;
+    }
+
+    &:nth-child(5) {
+      order: 3;
+      display: block;
+    }
+  }
+
+  .flying-cakes-block__image-wrapper {
+    position: static;
+  }
+
+  .flying-cakes-block__info-popup {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    margin: auto;
+    z-index: 1;
+  }
+}
+
+@media (max-width: map-get($tablet, md)-1) {
+  .flying-cakes-block {
+    display: none;
   }
 }

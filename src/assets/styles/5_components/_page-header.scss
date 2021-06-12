@@ -1,13 +1,11 @@
 .page-header {
-   position: relative; 
-   display: flex;
-   align-items: center; 
-   justify-content: center; 
-   min-height: 130px;    
+   position: relative;  
+   margin: 0 0 5px;    
 }
 
 .page-header__logo {
    position: absolute;
+   top: 34px;
    left: 0;
    right: 0;   
    width: 74px;
@@ -32,18 +30,39 @@
    }
 }
 
+.page-header__menu {
+   position: relative;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   min-height: 125px; 
+}
+
+.page-header__menu-wrapper {
+   width: 100%;
+
+   &::before {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      display: flex;
+      width: 100%;
+      height: 22px;
+      background: url("assets/images/static/wavy-line.png") no-repeat center;
+      z-index: 1;
+   }
+}
+
 .page-header__nav {
-   display: grid;
-   grid-template-columns: 1fr 1fr;
-   column-gap: 160px;
-   height: 100%;  
-   margin: 0 60px 8px; 
+   display: flex;  
 }
 
 .page-header__nav-list {
+   flex-basis: 50%;
    display: flex;  
    flex-wrap: wrap;
    justify-content: flex-end;  
+   margin: 0 90px;
    transition: all 0.3s ease 0s;
    
    &--right-list {
@@ -52,7 +71,7 @@
 }
 
 .page-header__nav-item {
-   margin: 10px 20px;
+   margin: 10px 15px;
 }
 
 .page-header__nav-list-link {
@@ -94,92 +113,203 @@
    }
 }
 
-@media (max-width: map-get($tablet, lg) - 1) {
+@media (max-width: map-get($laptop, sm) - 1) {
    .page-header__logo {
       top: 35px;
       left: 50px;
       margin: auto 0; 
    }
 
-   .page-header__nav {
-      column-gap: 20px;     
-      margin: 20px 125px;
+   .page-header__nav {     
+      margin: 20px 150px;
+   }
+
+   .page-header__nav-list {
+      margin: 0;
    }
 }
 
-@media (max-width: map-get($tablet, md) - 1) {
-   .page-header__nav {
+@media (max-width: map-get($tablet, lg) - 1) {
+   .page-header__menu-wrapper {
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin: 100px 15px 20px;
+      padding: 110px 40px 20px;
+   }
+
+   .page-header__nav {
+      flex-direction: column;
+      margin: 0 0 20px;
    }
 
    .page-header__nav-list {
       flex-direction: column;
-      align-items: center; 
+   }
+
+   .page-header__social {
+      position: static;
+      margin: 0 20px 0;
    }
 
    .page-header__menu._active {
-      .page-header__menu-wrapper {
-         position: absolute;
-         top: 50px;
-      }
+      display: flex;
+      flex-direction: column;
+      padding: 0 50px;
 
-      &._open {
-         .page-header__menu-toggle {            
+      .page-header__menu-toggle {
+         align-self: flex-end;
+         display: flex;
+         flex-direction: column;
+         align-items: stretch;
+         justify-content: space-between;
+         width: 40px;
+         height: 25px;
+         padding: 0;
+         border: 0;
+         background: inherit;
 
-            span {
-               transform: scale(0) translate(0px, -50%);
-             }
-       
-             &::before {
-               position: absolute;
-               top: 50%;
-               transform: rotate(-45deg) translate(0px, -50%);
-             }
-       
-             &::after {
-               position: absolute;
-               bottom: 50%;
-               transform: rotate(45deg) translate(0px, 50%);
-             }
+         & span,
+         &::before,
+         &::after {
+            height: 2px;
+            width: 40px;
+            background: $secondary-color;
+            transition: all 0.3s ease 0s;
          }
 
-         .page-header__menu-wrapper {
-            top: 100px;
-            left: 0;
-            width: 100%;
-            height: auto;
-            padding: 0 0 60px;
-            z-index: 10;
-            background-color: $additional-color;
-            transition: all 0.3s ease 0s;
+         &::before,
+         &::after {
+            content: "";
+         }
 
-            &::before {
-               content: "";
-               position: absolute;
-               bottom: -10px;
-               display: flex;
-               width: 100%;
-               height: 22px;
-               background: url("assets/images/static/wavy-line.png") no-repeat center;
+         &:hover {
+            & span,
+            &::before,
+            &::after {
+               background: $accent-color;
             }
          }
 
-         .page-header__nav { 
-            display: flex;
-            margin: 0;
+         &:active {
+            & span,
+            &::before,
+            &::after {
+               opacity: 0.7;
+            } 
          }
+      }
 
-         .page-header__social {
-            display: flex;
-            justify-content: center;
-            bottom: 20px;
-            top: initial;
-            left: 0; 
-            right: 0;          
-         }         
+      .page-header__menu-wrapper {
+         display: none;
       }
    }
+
+   .page-header__menu._active._open {
+      .page-header__menu-toggle { 
+         position: relative;
+         
+
+         span {
+            transform: scale(0) translate(0px, -50%);
+         }
+      
+         &::before {
+            position: absolute;
+            top: 50%;
+            transform: rotate(-45deg) translate(0px, -50%);
+         }
+      
+         &::after {
+            position: absolute;
+            bottom: 50%;
+            transform: rotate(45deg) translate(0px, 50%);
+         }         
+      }
+
+      .page-header__menu-wrapper {
+         position: absolute;
+         top: 120px;
+         left: 0;
+         right: 0;
+         display: flex;
+         align-items: flex-start;
+         padding: 0 0 20px;
+         z-index: 10;
+         background: $additional-color;
+         transition: top 0.3s ease 0s;
+      }
+
+      .page-header__nav-list {
+         padding: 0 40px;
+      }
+
+      .page-header__social {
+         padding: 0 40px;
+      }
+   }
+
+
+//    .page-header__nav {
+//       display: flex;
+//       flex-direction: column;
+//       align-items: center;
+//       margin: 100px 15px 20px;
+//    }
+
+//    .page-header__nav-list {
+//       flex-direction: column;
+//       align-items: center; 
+//    }
+
+//    .page-header__menu._active {
+//       .page-header__menu-wrapper {
+//          position: absolute;
+//          top: 50px;
+//       }
+
+//       &._open {
+         // .page-header__menu-toggle {  
+         //    span {
+         //       transform: scale(0) translate(0px, -50%);
+         //     }
+       
+         //     &::before {
+         //       position: absolute;
+         //       top: 50%;
+         //       transform: rotate(-45deg) translate(0px, -50%);
+         //     }
+       
+         //     &::after {
+         //       position: absolute;
+         //       bottom: 50%;
+         //       transform: rotate(45deg) translate(0px, 50%);
+         //     }
+         // }
+
+//          .page-header__menu-wrapper {
+//             top: 100px;
+//             left: 0;
+//             width: 100%;
+//             height: auto;
+//             padding: 0 0 60px;
+//             z-index: 10;
+//             background-color: $additional-color;
+//             transition: all 0.3s ease 0s;//            
+//          }
+
+//          .page-header__nav { 
+//             display: flex;
+//             margin: 0;
+//          }
+
+//          .page-header__social {
+//             display: flex;
+//             justify-content: center;
+//             bottom: 20px;
+//             top: initial;
+//             left: 0; 
+//             right: 0;          
+//          }         
+//       }
+//    }
 }

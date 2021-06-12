@@ -66,3 +66,9 @@
   @include fontStyleTwo;
   text-align: center;
 }
+
+@media (max-width: map-get($tablet, lg)-1) {
+  .features__list-item {
+    margin: 20px;
+  }
+}

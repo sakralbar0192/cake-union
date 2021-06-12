@@ -70,6 +70,7 @@
   opacity: 0.7;
   }
 }
+
 .contacts__map-wrapper {
   position: relative;
   display: flex;
@@ -86,4 +87,10 @@
   left: 0;
   right: 0;
   z-index: 1;
+}
+
+@media (max-width: map-get($tablet, md)-1) {
+  .contacts__wrapper {
+    flex-direction: column;
+  }
 }

@@ -1,7 +1,7 @@
 .info-block {
   box-sizing: border-box;
   position: relative;
-  width: 700px;
+  max-width: 700px;
   margin: auto;
   padding: 53px 90px;
   border: 1px solid $accent-color;
@@ -58,5 +58,12 @@
 
   &:focus {
     outline: none;
+  }
+}
+
+@media (max-width: map-get($tablet, lg)-1) {
+  .info-block {
+    margin: 0 22px 20px;
+    padding: 40px;
   }
 }
