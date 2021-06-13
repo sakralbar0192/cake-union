@@ -5,13 +5,8 @@
 }
 
 .contacts__title {
-  margin: 0 0 58px;
-  font-family: "Junegull";
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 22px;
-  letter-spacing: -0.72px;
-  color: $secondary-color;
+  @include titleFontStyleOne;
+  margin: 0 0 58px;  
 }
 
 .contacts__wrapper {
@@ -33,7 +28,6 @@
   justify-content: center;
   padding: 10px 60px 0 0;
 }
-
 
 .contacts__info-block-section {
   display: flex;

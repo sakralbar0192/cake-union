@@ -1,0 +1,96 @@
+.cakes-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 54px 0;
+}
+
+.cakes-list__item {
+  max-width: 360px;
+  margin: 0 0 27px;
+  border: 1px solid $additional-color-four;
+
+  &--hit {
+    .cakes-list__info-block {
+      &::after {
+        @include fontStyleOne;
+        content: "хит";
+        position: absolute;
+        top: 18px;
+        right: 21px;
+        letter-spacing: -0.32px;
+        text-transform: uppercase;
+        color: $contact-secondary-color;
+      }
+    }
+  }    
+}
+
+.cakes-list__item-wrapper-link {
+}
+.cakes-list__image-wrapper {
+}
+.cakes-list__slider-controls {
+}
+.cakes-list__control {
+  display: none;
+}
+.cakes-list__control--previous {
+}
+.cakes-list__control--next {
+}
+
+.cakes-list__info-block {
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 210px;
+  padding: 19px 20px;
+  border-top: 1px solid $additional-color-four;  
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 57px;
+    left: 0;
+    right: 0;
+    width: 320px;
+    height: 5px;
+    margin: auto;
+    background: url("assets/images/static/little-wavy-line-yellow.png") no-repeat center;
+  }
+}
+
+.cakes-list__cake-name {
+  @include fontStyleOne;
+  margin: 0 0 11px;
+  font-size: 19px;
+  color: $primary-color;
+  letter-spacing: -0.32px;
+}
+
+.cakes-list__cake-info {
+  @include fontStyleOne;
+  line-height: 20px;
+  opacity: 0.6;
+}
+
+.cakes-list__price-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  
+}
+
+.cakes-list__weight,
+.cakes-list__price {
+  margin: 0 10px;
+  font-family: "Lato";
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: -0.36px;
+  color: $primary-color;  
+}

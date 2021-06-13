@@ -1,6 +1,35 @@
 .page-header {
    position: relative;  
-   margin: 0 0 5px;    
+   margin: 0 0 5px;   
+   
+   &--internal-page {
+      background: $secondary-color;
+
+      .page-header__logo {
+         top: 19px;
+      }
+
+      .page-header__nav-list-link {
+         color: $additional-color;
+      }
+
+      .page-header__social {
+         display: none;
+      }
+
+      .page-header__menu-wrapper {
+         padding: 0 0 5px;
+         
+         &::before {
+            background: url("assets/images/static/wavy-line-green.png") no-repeat  0px center;
+            transform: rotate(180deg);
+         }
+      }
+
+      .page-header__menu {
+         min-height: 95px;
+      }
+   }
 }
 
 .page-header__logo {
