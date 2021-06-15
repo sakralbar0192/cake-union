@@ -1,0 +1,15 @@
+._loading {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 33px;
+    height: 49px;
+    margin: auto;
+    background: url("assets/images/static/loading.png") no-repeat center;
+  }
+}

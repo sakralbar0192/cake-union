@@ -1,0 +1,15 @@
+.bread-crumbs {
+  text-align: center;  
+}
+
+.bread-crumbs__crumb {
+  @include fontStyleOne;  
+  font-size: 13px;
+  letter-spacing: -0.22px;
+  color: $primary-color;
+  
+  &:not(:last-child)::after {
+    content: ">";
+    margin: 0 0 0 5px;
+  }
+} 

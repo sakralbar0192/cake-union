@@ -1,27 +1,4 @@
-.cakes-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 54px 0 92px;
-
-  &._loading {
-    position: relative;
-
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      width: 33px;
-      height: 49px;
-      margin: auto;
-      background: url("assets/images/static/loading.png") no-repeat center;
-    }
-  }
-}
-
-.cakes-list__item {
+.product-card {
   position: relative;
   max-width: 360px;
   margin: 0 10px 27px;
@@ -42,7 +19,7 @@
   }
 
   &--hit {
-    .cakes-list__info-block {
+    .product-card__info-block {
       &::after {
         @include fontStyleOne;
         content: "хит";
@@ -64,7 +41,7 @@
       z-index: 20;
     }
 
-    .cakes-list__image-wrapper {
+    .product-card__image-wrapper {
       position: relative;      
 
       &::before {
@@ -78,14 +55,14 @@
       }
     }
 
-    .cakes-list__cake-name,
-    .cakes-list__cake-info,
-    .cakes-list__weight,
-    .cakes-list__price {
+    .product-card__title,
+    .product-card__info,
+    .product-card__quantity,
+    .product-card__price {
       color: $card-hover-color;
     }
 
-    .cakes-list__info-block {
+    .product-card__info-block {
       &::before {
         background: url("assets/images/static/line-hover.png") no-repeat center;
       }
@@ -97,7 +74,7 @@
   }
 }
 
-.cakes-list__image-wrapper {
+.product-card__image-wrapper {
   &::before {
     content: "";
     transition: all 2s ease 0s;
@@ -105,11 +82,7 @@
   
 }
 
-.cakes-list__control {
-  display: none;
-}
-
-.cakes-list__info-block {
+.product-card__info-block {
   box-sizing: border-box;
   position: relative;
   display: flex;
@@ -133,7 +106,7 @@
   }
 }
 
-.cakes-list__cake-name {
+.product-card__title {
   @include fontStyleOne;
   margin: 0 0 11px;
   font-size: 19px;
@@ -142,21 +115,22 @@
   transition: all 2s ease 0s;
 }
 
-.cakes-list__cake-info {
+.product-card__info {
   @include fontStyleOne;
   line-height: 20px;
+  color: $primary-color; 
   opacity: 0.6;
   transition: all 2s ease 0s;
 }
 
-.cakes-list__price-info {
+.product-card__price-info {
   display: flex;
   justify-content: center;
   align-items: center;  
 }
 
-.cakes-list__weight,
-.cakes-list__price {
+.product-card__quantity,
+.product-card__price {
   margin: 0 10px;
   font-family: "Lato";
   font-size: 18px;
@@ -167,18 +141,14 @@
 }
 
 @media (max-width: map-get($tablet, lg) - 1) {
-  .cakes-list {
-    justify-content: center;
-  }
-
-  .cakes-list__image-wrapper {
+  .product-card__image-wrapper {
     img {
       width: 100%;
       height: auto;
     }
   }
 
-  .cakes-list__info-block {
+  .product-card__info-block {
     &::before {
       width: 280px;
     }
