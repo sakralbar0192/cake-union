@@ -1,7 +1,7 @@
 .main-cakes {
   box-sizing: border-box;
   padding: 50px 30px;
-  max-width: 830px;
+  max-width: 840px;
   margin: 0 auto 45px;
 }
 
@@ -18,7 +18,7 @@
 .main-cakes__text {
   @include fontStyleTwo;
   position: relative;
-  margin: 0 10px 22px;  
+  margin: 0 15px 22px;  
 }
 
 .main-cakes__selected-text {

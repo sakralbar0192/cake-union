@@ -17,25 +17,169 @@
        </a>
       <include src="src/html/includes/page-header.html"></include>
   </header>
-
-  <main class="menu-main">
-    <h1 class="menu-main__title">Меню</h1>
-    <div class="menu-main__bread-crumbs bread-crumbs">
+  <main class="menu__main _loading">
+    <h1 class="menu__title">Меню</h1>
+    <div class="menu__bread-crumbs bread-crumbs">
       <a href="./index.ru" class="bread-crumbs__crumb">Главная</a>
       <a href="#" class="bread-crumbs__crumb">Меню</a>
     </div>
-
-    <a href="./index.html" class="menu-main__back-to-main-link">Назад на главную</a>
-
-    <section class="menu-main__menu">
-      <include src="src/html/includes/menu.html"></include>
-    </section>
-
-    <section class="menu__products">
-      <include src="src/html/includes/products.html"></include>
-    </section>
-  </main>
-  
+    <div class="menu__wrapper">
+      <include src="src/html/includes/menu-list.html"></include>
+      <ul class="menu__products">
+        <li class="product-card">
+          <a href="./product.html" class="product-card__wrapper">
+            <div class="product-card__image-wrapper">
+              <picture>
+                <source type="image/webp" srcset="assets/images/static/breakfest-one.webp">
+                <img src="assets/images/static/breakfest-one.jpg" alt="Американский завтрак" width="360" height="285">
+              </picture>          
+            </div>
+            <div class="product-card__info-block">
+              <div>
+                <h3 class="product-card__title">Американский завтрак</h3>
+                <p class="product-card__info">Классическая глазунья из двух яиц с сочными ломтиками обжаренного бекона, картофель Айдахо с соусом</p>
+              </div>          
+              <div class="product-card__price-info">
+                <span class="product-card__quantity">160 г.</span>
+                <span class="product-card__price">289&#160;&#8381;</span>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li class="product-card">
+          <a href="./product.html" class="product-card__wrapper">
+            <div class="product-card__image-wrapper">
+              <picture>
+                <source type="image/webp" srcset="assets/images/static/breakfest-two.webp">
+                <img src="assets/images/static/breakfest-two.jpg" alt="Русский завтрак" width="360" height="285">
+              </picture>          
+            </div>
+            <div class="product-card__info-block">
+              <div>
+                <h3 class="product-card__title">Русский завтрак</h3>
+                <p class="product-card__info">Два яйца пашот в дуэте с малосоленой сёмгой, с ржаными тостами и лист салата с овощами, фирменные сырники со сметаной и клубничным джемом.</p>
+              </div>          
+              <div class="product-card__price-info">
+                <span class="product-card__quantity">160 г.</span>
+                <span class="product-card__price">289&#160;&#8381;</span>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li class="product-card">
+          <a href="./product.html" class="product-card__wrapper">
+            <div class="product-card__image-wrapper">
+              <picture>
+                <source type="image/webp" srcset="assets/images/static/breakfest-three.webp">
+                <img src="assets/images/static/breakfest-three.jpg" alt="Английский завтрак" width="360" height="285">
+              </picture>          
+            </div>
+            <div class="product-card__info-block">
+              <div>
+                <h3 class="product-card__title">Английский завтрак</h3>
+                <p class="product-card__info">Овсяная каша с сезонными ягодами, нарезка 
+                  из ветчины и сыра, домашний хлеб с
+                  о сливочным маслом и блинчик с клубничным джемом.</p>
+              </div>          
+              <div class="product-card__price-info">
+                <span class="product-card__quantity">160 г.</span>
+                <span class="product-card__price">289&#160;&#8381;</span>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li class="product-card">
+          <a href="./product.html" class="product-card__wrapper">
+            <div class="product-card__image-wrapper">
+              <picture>
+                <source type="image/webp" srcset="assets/images/static/breakfest-four.webp">
+                <img src="assets/images/static/breakfest-four.jpg" alt="Итальянский завтрак" width="360" height="285">
+              </picture>          
+            </div>
+            <div class="product-card__info-block">
+              <div>
+                <h3 class="product-card__title">Итальянский завтрак</h3>
+                <p class="product-card__info">Отварные пене обжаренные с яйцом 
+                  и кусочками ветчины, лист салата с овощами, домашний хлеб и блинчики с Нутеллой</p>
+              </div>          
+              <div class="product-card__price-info">
+                <span class="product-card__quantity">160 г.</span>
+                <span class="product-card__price">289&#160;&#8381;</span>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li class="product-card">
+          <a href="./product.html" class="product-card__wrapper">
+            <div class="product-card__image-wrapper">
+              <picture>
+                <source type="image/webp" srcset="assets/images/static/breakfest-five.webp">
+                <img src="assets/images/static/breakfest-five.jpg" alt="Французский завтрак" width="360" height="285">
+              </picture>          
+            </div>
+            <div class="product-card__info-block">
+              <div>
+                <h3 class="product-card__title">Французский завтрак</h3>
+                <p class="product-card__info">Запечённая глазунья, обжаренная сосиска, кетчуп, лист салата с овощами и домашний 
+                  хлеб со сливочным маслом, пышный круасан 
+                  с клубничным джемом.</p>
+              </div>          
+              <div class="product-card__price-info">
+                <span class="product-card__quantity">160 г.</span>
+                <span class="product-card__price">289&#160;&#8381;</span>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li class="product-card">
+          <a href="./product.html" class="product-card__wrapper">
+            <div class="product-card__image-wrapper">
+              <picture>
+                <source type="image/webp" srcset="assets/images/static/breakfest-six.webp">
+                <img src="assets/images/static/breakfest-six.jpg" alt="Яйцо «Бенедикт» с беконом 
+                и голландским соусом" width="360" height="285">
+              </picture>          
+            </div>
+            <div class="product-card__info-block">
+              <div>
+                <h3 class="product-card__title">Яйцо «Бенедикт» с беконом 
+                  и голландским соусом</h3>
+                <p class="product-card__info">Яйцо пашот, сыр Чеддер и обжаренный бекон
+                  на ржаном тосте под голландским соусом</p>
+              </div>          
+              <div class="product-card__price-info">
+                <span class="product-card__quantity">160 г.</span>
+                <span class="product-card__price">289&#160;&#8381;</span>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li class="product-card">
+          <a href="./product.html" class="product-card__wrapper">
+            <div class="product-card__image-wrapper">
+              <picture>
+                <source type="image/webp" srcset="assets/images/static/breakfest-seven.webp">
+                <img src="assets/images/static/breakfest-seven.jpg" alt="Яйцо «Бенедикт» с лососем 
+                и голландским соусом" width="360" height="285">
+              </picture>          
+            </div>
+            <div class="product-card__info-block">
+              <div>
+                <h3 class="product-card__title">Яйцо «Бенедикт» с лососем 
+                  и голландским соусом</h3>
+                <p class="product-card__info">Яйцо пашот, сыр Чеддер и слабосоленая сёмга
+                  на ржаном тосте под голландским соусом</p>
+              </div>          
+              <div class="product-card__price-info">
+                <span class="product-card__quantity">160 г.</span>
+                <span class="product-card__price">289&#160;&#8381;</span>
+              </div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>    
+  </main>  
   <include src="src/html/includes/page-footer.html"></include>
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js"></script>  
 </body>

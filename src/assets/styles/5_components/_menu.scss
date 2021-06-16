@@ -1,5 +1,42 @@
-.menu {
+.menu__main {
+  width: 1170px;
+  margin: 0 auto 106px;
+  padding: 50px 10px 90px;
+}
+
+.menu__title {
+  @include titleFontStyleTwo;
+  margin: 0 20px 12px;
+  text-align: center;
+}
+.menu__bread-crumbs {
+  margin: 0 0 45px;
+}
+
+.menu__wrapper {
   display: flex;
-  flex-direction: column;
-  max-width: 290px;
+  justify-content: space-between;
+}
+
+.menu__products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  max-width: 780px;
+}
+
+@media (max-width: map-get($laptop, sm) - 1) {
+  .menu__main {
+    width: 100%;
+  }
+
+  .menu__products {
+    justify-content: center;
+  }
+}
+
+@media (max-width: map-get($tablet, md) - 1) {
+  .menu__wrapper {
+    flex-direction: column;
+  }
 }

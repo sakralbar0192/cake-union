@@ -1,0 +1,56 @@
+.menu-list {  
+  box-sizing: border-box;
+  min-width: 375px;
+  padding: 0 70px 0 10px ;
+}
+
+.menu-list__item {
+  position: relative;
+  margin: 0 0 27px;
+}
+
+.menu-list__link {
+  font-family: "Junegull";
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 22px;
+  letter-spacing: -0.48px;
+  color: $primary-color;
+
+  &:hover {
+    color: $secondary-color;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 11px;
+      right: -39px;
+      width: 39px;
+      height: 5px;
+      background: url("assets/images/static/little-wavy-line.png") no-repeat center;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.menu-list__text {
+  margin: 8px 0 0 5px;
+  font-family: "Gotham Pro";
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+  letter-spacing: -0.24px;
+  color: $contact-secondary-color;
+}
+
+@media (max-width: map-get($tablet, md) - 1) {
+  .menu-list {
+    width: 100%;
+    min-width: 0;
+    padding: 0 20px;
+    text-align: center;
+  }
+}

@@ -1,0 +1,96 @@
+.product__main {
+  width: 1170px;
+  margin: auto;
+  padding: 50px 10px 60px;
+}
+
+.product__title {
+  @include titleFontStyleTwo;
+  margin: 0 20px 12px;
+  text-align: center;
+}
+
+.product__bread-crumbs {
+  margin: 0 0 17px;
+}
+
+.product__go-back-link {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 0 12px 0 0;
+  margin: 0 0 5px;
+  font-family: "Lato";
+  font-size: 12px;
+  line-height: 22px;
+  letter-spacing: -0.28px;
+  color: rgba($primary-color, 0.5);
+  text-align: right;
+
+  &::before {
+    content: "";
+    width: 22px;
+    height: 13px;
+    margin: 0 10px 0 0;
+    background: url("assets/images/static/arrow-left.png") no-repeat center;
+  }
+  
+  &:hover {
+    opacity: 0.7;
+  }
+  
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.product__wrapper {
+  display: flex;
+  justify-content: space-between;  
+}
+
+.product__current-product {
+  margin: 0 0 53px;
+}
+
+.product__inner-wrapper {
+  max-width: 780px;
+}
+
+.product_subtitle {
+  margin: 0 15px 15px;
+  font-family: "Junegull";
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 22px;
+  letter-spacing: -0.48px;
+  color: $primary-color;
+}
+
+.product__recomended-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media (max-width: map-get($laptop, sm) - 1) {
+  .product__main {
+    width: 100%;
+  }
+
+  .product__wrapper {
+    flex-direction: column;
+  }
+
+  .product__inner-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+@media (max-width: map-get($tablet, md) - 1) {
+  .menu__wrapper {
+    flex-direction: column;
+  }
+}

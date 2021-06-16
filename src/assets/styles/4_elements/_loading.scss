@@ -4,12 +4,25 @@
   &::after {
     content: "";
     position: absolute;
-    bottom: 0;
+    bottom: 20px;
     left: 0;
     right: 0;
     width: 33px;
-    height: 49px;
+    height: 33px;
     margin: auto;
     background: url("assets/images/static/loading.png") no-repeat center;
+    animation: rotate 2s linear infinite
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    width: 2px;
+    height: 20px;
+    background: $secondary-color;
   }
 }
