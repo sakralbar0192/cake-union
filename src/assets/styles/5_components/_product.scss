@@ -75,11 +75,8 @@
 
 @media (max-width: map-get($laptop, sm) - 1) {
   .product__main {
+    box-sizing: border-box;
     width: 100%;
-  }
-
-  .product__wrapper {
-    flex-direction: column;
   }
 
   .product__inner-wrapper {
@@ -87,10 +84,29 @@
     flex-direction: column;
     justify-content: center;
   }
+
+  .product__recomended-list {
+    justify-content: space-evenly;
+  }
+}
+
+@media (max-width: map-get($tablet, lg) - 1) {
+  .product__wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 @media (max-width: map-get($tablet, md) - 1) {
+  .product__title {
+    margin: 0 10px 12px;
+  }
+
   .menu__wrapper {
     flex-direction: column;
   }
+
+  .product_subtitle {
+    text-align: center;
+  }  
 }

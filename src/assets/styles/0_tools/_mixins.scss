@@ -31,7 +31,7 @@
   font-size: 36px;
   line-height: 22px;
   letter-spacing: -0.72px;
-  color: $secondary-color;
+  color: $secondary-color;  
 }
 
 @mixin titleFontStyleTwo {
@@ -41,4 +41,9 @@
   line-height: 22px;
   letter-spacing: -0.96px;
   color: $secondary-color;
+
+  @media (max-width: map-get($tablet, lg) - 1) {
+    font-size: 36px;
+    line-height: 40px;
+  }
 }
