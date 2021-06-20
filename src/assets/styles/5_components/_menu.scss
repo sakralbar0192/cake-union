@@ -4,11 +4,10 @@
   padding: 50px 10px 90px;
 }
 
-.menu__title {
-  @include titleFontStyleTwo;
-  margin: 0 20px 12px;
-  text-align: center;
+.menu__title {  
+  margin: 0 20px 12px;  
 }
+
 .menu__bread-crumbs {
   margin: 0 0 45px;
 }

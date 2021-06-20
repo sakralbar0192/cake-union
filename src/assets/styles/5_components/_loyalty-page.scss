@@ -1,0 +1,104 @@
+.loyalty-page {
+  padding: 52px 30px 50px;
+}
+
+.loyalty-page__title {
+  margin: 0 0 10px;
+}
+
+.loyalty-page__bread-crumbs {
+  margin: 0 0 45px;
+}
+
+.loyalty-page__hero-image-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 39px;
+}
+
+.loyalty-page__info-block {
+  margin: 0 auto 38px;
+  padding: 65px 42px 75px;
+
+  p {
+    text-align: left;
+  } 
+}
+
+.loyalty-page__text {
+  @include fontStyleTwo;
+  width: 750px;
+  margin: 0 auto 22px;
+
+  &--selected {
+    font-weight: 700;
+  }
+}
+
+.loyalty-page__features {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  max-width: 750px;
+  margin: 60px auto 31px;
+}
+
+.loyalty-page__features-item {
+  @include fontStyleTwo;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 165px;
+  text-align: center;
+
+  &--discounts {
+    &::before {
+      width: 53px;
+      height: 53px;
+      background: url("assets/images/static/loyalty-feature-discount.png") no-repeat center;
+    }
+  }
+
+  &--bonus {
+    &::before {
+      width: 59px;
+      height: 51px;
+      background: url("assets/images/static/loyalty-feature-bonus.png") no-repeat center;
+    }
+  }
+
+  &--10-persent {
+    &::before {
+      width: 52px;
+      height: 49px;
+      background: url("assets/images/static/loyalty-feature-10-percent.png") no-repeat center;
+    }
+  }
+
+  &--retuns {
+    &::before {
+      width: 43px;
+      height: 54px;
+      background: url("assets/images/static/loyalty-feature-retuns.png") no-repeat center;
+    }
+  }
+
+  &::before {
+    content: ""; 
+    margin: 0 0 30px;   
+  }
+}
+
+.loyalty-page__rules-link {  
+  width: 750px;
+  margin: auto;
+  a {
+    font-family: "Gotham Pro";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: -0.24px;
+    color: $contact-secondary-color;
+  }
+}

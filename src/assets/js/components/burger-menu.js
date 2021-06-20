@@ -3,7 +3,9 @@
 const menu = document.querySelector('#menu');
 const toggle = document.querySelector('#toggle');
 
-menu.classList.add('_active');
+if (menu) {
+  menu.classList.add('_active');
+}
 
 if(toggle) {  
   toggle.addEventListener("click", (e)=> {    
