@@ -92,7 +92,8 @@
 
 .loyalty-page__rules-link {  
   width: 750px;
-  margin: auto;
+  margin: 0 auto 70px;
+
   a {
     font-family: "Gotham Pro";
     font-weight: 400;
@@ -100,5 +101,29 @@
     line-height: 22px;
     letter-spacing: -0.24px;
     color: $contact-secondary-color;
+  }
+}
+
+@media (max-width: map-get($laptop, sm) - 1) {
+  .loyalty-page__hero-image-wrapper {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .loyalty-page__text,
+  .loyalty-page__rules-link {
+    width: auto;
+  }
+} 
+
+@media (max-width: map-get($tablet, md) - 1) {
+  .loyalty-page__features {
+    justify-content: space-evenly;
+  }
+
+  .loyalty-page__features-item {
+    margin: 0 0 20px;
   }
 }

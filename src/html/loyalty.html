@@ -64,10 +64,10 @@
         <form action="post" class="loaylty-page__form form">
             <h2 class="form__title">Анкета программы лояльности</h2>
             <div class="form__radio-block">
-                <input name="discount" type="radio" class="form__radio-input form__radio-input--cakes" id="cakes-radio">
-                <label for="cakes-radio" class="form__radio-label">Хочу скидку на тортики</label>
-                <input name="discount" type="radio" class="form__radio-input form__radio-input--coffee" id="coffee-radio" checked>
-                <label for="coffee-radio" class="form__radio-label">Очень люблю кофе, хочу скидку</label>
+                <input name="discount" type="radio" class="form__radio-input" id="cakes-radio">
+                <label for="cakes-radio" class="form__radio-label form__radio-label--cakes"><span>Хочу скидку на тортики</span></label>
+                <input name="discount" type="radio" class="form__radio-input" id="coffee-radio" checked>
+                <label for="coffee-radio" class="form__radio-label form__radio-label--coffee"><span>Очень люблю кофе, хочу скидку</span></label>
             </div>
             <div class="form__text-input-block">
                 <label>
@@ -92,10 +92,12 @@
                 </label>
                 <p class="form__footnotes">* Звездочкой отмечены поля, обязательные для заполнения.</p>
             </div>
-            <label class="form__checkbox-label">
-                Согласен(а) на обработку моих персональных данных
-                <input type="checkbox">
-            </label>
+            <div>
+                <input class="form__checkbox-input" type="checkbox" id="approval">
+                <label class="form__checkbox-label" for="approval">
+                    <span>Согласен(а) на обработку моих персональных данных</span>
+                </label>
+            </div>        
             <button class="form__submit-button" type="submit">
                 отправить анкету
             </button>
