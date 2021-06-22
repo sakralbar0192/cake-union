@@ -2,7 +2,7 @@
   display: flex;   
   flex-wrap: wrap; 
   justify-content: center;
-  margin: 0 0 75px;
+  margin: 0 0 35px;
 }
 
 .features__list-item {
@@ -11,34 +11,14 @@
   flex-direction: column;
   align-items: center;
   max-width: 350px;
-  margin: 0 20px 0;
+  margin: 0 20px 0;  
+}
 
-  &::before {
-    content: "";
-    height: 100px;
-    margin: 0 0 40px;
-  }
-   
-  &--cake {
-    &::before {
-      width: 98px;      
-      background: url("assets/images/static/decor-cake.png") no-repeat bottom;
-    }
-  }
-
-  &--cook {
-    &::before {
-      width: 84px;
-      background: url("assets/images/static/decor-cook.png") no-repeat bottom;
-    }
-  }
-
-  &--drink {
-    &::before {
-      width: 81px;
-      background: url("assets/images/static/decor-drink.png") no-repeat bottom;
-    }
-  }
+.features__image-wrapper {
+  display: flex;
+  align-items: flex-end;
+  height: 100px;
+  margin: 0 0 35px;
 }
 
 

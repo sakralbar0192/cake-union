@@ -1,0 +1,32 @@
+.swiper-container {
+  max-width: 1060px;
+  padding: 40px 50px;
+  margin: 0 auto 78px;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  background: url("assets/images/static/swiper-nav.png") no-repeat center;
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+.swiper-button-prev {
+  transform: rotate(180deg);
+}
+
+.swiper-pagination-bullet {
+  background: $accent-color;
+  opacity: 1;
+
+  &-active {
+    background: $secondary-color;
+  }
+}
