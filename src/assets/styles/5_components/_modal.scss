@@ -1,0 +1,128 @@
+.modal {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0; 
+  right: 0;
+  background: $additional-color;
+  opacity: 0.95;
+  z-index: 20;
+  
+  &._active {
+    display: flex;
+  }
+}
+
+.modal__wrapper {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;  
+  flex-wrap: wrap;
+}
+
+.modal__title {
+  font-family: "Junegull";
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: -0.40px;
+  color: $secondary-color; 
+}
+
+.modal__product-card {
+  margin: 0 0 35px;
+}
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal__input,
+.modal__textarea {
+  @include fontStyleTwo;
+  box-sizing: border-box;
+  min-width: 360px;
+  margin: 10px 0;
+  padding: 8px 12px;
+  border: 1px solid $accent-color;
+  
+  &:hover {
+    border: 1px solid $secondary-color;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+.modal__textarea {
+  min-height: 180px;
+  margin: 10px 0 5px;
+  padding: 15px 12px;
+}
+
+.modal__input {
+  margin: 0 0 35px;
+}
+
+.modal__checkbox-label {
+  @include fontStyleTwo;
+  display: flex;
+  align-items: center;
+  margin: 0 0 15px;
+  padding: 0 10px;
+  font-size: 12px;
+  letter-spacing: -0.24px;
+
+  &::before {
+    content: "";
+    box-sizing: border-box;
+    width: 15px;
+    height: 15px;
+    margin: 0 12px 0 0;
+    border: 1px solid $secondary-color;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+  
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.modal__checkbox {
+  display: none;
+
+  &:checked + .modal__checkbox-label {
+    &::before {
+      background: $accent-color;
+    }
+  }
+}
+
+.modal__submit {
+  @include fontStyleTwo;
+  min-width: 185px;
+  padding: 3px 20px;
+  font-family: "Lato";
+  background: $accent-color;
+  border: 0;
+  border-radius: 14px;
+}
+
+@media (max-width: map-get($tablet, sm) - 1) {
+  .modal__input,
+  .modal__textarea {
+    min-width: 0;
+    width: 280px;
+  }
+} 

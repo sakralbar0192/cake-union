@@ -30,3 +30,19 @@
     background: $secondary-color;
   }
 }
+
+@media (max-width: map-get($tablet, md)-1) {
+  .swiper-container {
+    padding: 40px 10px;
+  }
+  
+  .swiper-slide {
+    img {
+      min-width: 320px;
+      min-height: 52vw;
+      width: 100vw;
+      height: auto;
+    }
+  }
+ 
+}

@@ -87,4 +87,13 @@
   .contacts__wrapper {
     flex-direction: column;
   }
+
+  .contacts__info-block {
+    flex-basis: 100%;
+    justify-content: center;
+  }
+
+  .contacts__info-block-wrapper {
+    padding: 0 30px;
+  }
 }
