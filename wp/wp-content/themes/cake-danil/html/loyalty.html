@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.min.css">   
+    <title>CC-Union</title>
+</head>
+<body>
+    <header class="page-header page-header--internal-page">
+        <a href="./index.html" class="page-header__logo">
+            <picture>
+               <source type="image/webp" srcset="assets/images/static/logo-white.webp">
+               <img src="assets/images/static/logo-white.png" alt="Логотип" width="74" height="57">
+            </picture>      
+         </a>
+        <div class="page-header__menu" id="menu">
+   <button class="page-header__menu-toggle" id="toggle">
+      <span></span>
+   </button>
+   <div class="page-header__menu-wrapper">
+      <nav class="page-header__nav">
+         <ul class="page-header__nav-list">
+            <li class="page-header__nav-item">
+               <a href="./menu.html" class="page-header__nav-list-link">
+                  Меню
+               </a>
+            </li>
+            <li class="page-header__nav-item">
+               <a href="./cakes.html" class="page-header__nav-list-link">
+                  Целые торты
+               </a>               
+         </li></ul>
+         <ul class="page-header__nav-list page-header__nav-list--right-list">
+            <li class="page-header__nav-item">
+               <a href="./loyalty.html" class="page-header__nav-list-link">
+                  Программа лояльности
+               </a>
+            </li>
+            <li class="page-header__nav-item">
+               <a href="#" class="page-header__nav-list-link">
+                  Контакты
+               </a>
+            </li>
+         </ul>
+      </nav>
+      <ul class="page-header__social">
+         <li class="page-header__social-item">
+            <a href="#" class="page-header__social-link">
+               <picture>
+                  <source type="image/webp" srcset="assets/images/static/instagram-icon.webp">
+                  <img src="assets/images/static/instagram-icon.png" alt="Инстаграм" width="20" height="20">
+               </picture> 
+            </a>
+         </li>
+         <li class="page-header__social-item">
+            <a href="#" class="page-header__social-link">
+               <picture>
+                  <source type="image/webp" srcset="assets/images/static/vkontakte-icon.webp">
+                  <img src="assets/images/static/vkontakte-icon.png" alt="Вконтакте" width="20" height="20">
+               </picture> 
+            </a>
+         </li>
+      </ul>
+   </div>      
+</div>   
+
+    </header>    
+    <main class="loyalty-page">
+        <h1 class="loyalty-page__title page-title">программа лояльности</h1>
+        <div class="loyalty-page__bread-crumbs bread-crumbs">
+            <a href="./index.html" class="bread-crumbs__crumb">Главная</a>
+            <a class="bread-crumbs__crumb">Программа лояльности</a>
+        </div>
+        <div class="loyalty-page__hero-image-wrapper">
+            <picture>
+                <source type="image/webp" srcset="assets/images/static/loyalty-hero-image.webp">
+               <img src="assets/images/static/loyalty-hero-image.jpg" alt="Программа лояльности" width="1135" height="363">
+            </picture>
+        </div>
+        <div class="loyalty-page__info-block info-block">
+            <p class="info-block__text">Карта Программы поощрения клиентов ЛУКОЙЛ предназначена для постоянных клиентов Компании, которые регулярно совершают покупки на АЗС и хотели бы делать это на более выгодных условиях.</p>
+        </div>
+        <p class="loyalty-page__text">
+            Дежателям карты Программы поощрения клиентов ЛУКОЙЛ доступна классическая пластиковая карта и ее аналог — Виртуальная карта для использования с мобильного устройства.
+        </p>
+        <p class="loyalty-page__text">
+            С картой Вы можете делать покупки на АЗС «ЛУКОЙЛ» со скидкой, используя накопленные баллы. За каждые 50 рублей, потраченные на покупку топлива и других товаров, Вы получаете 1 балл. Накопленные баллы можно использовать при следующих покупках по правилу: 1 балл = 1 рубль.
+        </p>
+        <ul class="loyalty-page__features">
+            <li class="loyalty-page__features-item loyalty-page__features-item--discounts">
+                Скидки<br>до 30%
+            </li>
+            <li class="loyalty-page__features-item loyalty-page__features-item--bonus">
+                1 бонус<br>=<br>1 рубль
+            </li>
+            <li class="loyalty-page__features-item loyalty-page__features-item--10-persent">
+                10% бонусов<br>начисляется от<br>суммы покупки
+            </li>
+            <li class="loyalty-page__features-item loyalty-page__features-item--retuns">
+                3,1% бонусов<br>возвращается на<br>вашу карту от<br>суммы<br>любой покупки
+            </li>
+        </ul>
+        <p class="loyalty-page__text loyalty-page__text--selected">
+            Как получить карту?
+        </p>
+        <p class="loyalty-page__text">
+            Для получения карты, достаточно совершить покупку в размере 1399 руб.
+        </p>
+        <div class="loyalty-page__rules-link">
+            <a href="#">​Правила участия в Программе лояльности</a>
+        </div>        
+        <form action="post" class="loaylty-page__form form">
+            <h2 class="form__title">Анкета программы лояльности</h2>
+            <div class="form__radio-block">
+                <input name="discount" type="radio" class="form__radio-input" id="cakes-radio">
+                <label for="cakes-radio" class="form__radio-label form__radio-label--cakes"><span>Хочу скидку на тортики</span></label>
+                <input name="discount" type="radio" class="form__radio-input" id="coffee-radio" checked="">
+                <label for="coffee-radio" class="form__radio-label form__radio-label--coffee"><span>Очень люблю кофе, хочу скидку</span></label>
+            </div>
+            <div class="form__text-input-block">
+                <label>
+                    <span class="visually-hidden">Ваша фамилия*</span>
+                    <input type="text" class="form__text-input" placeholder="Ваша фамилия*">
+                </label>
+                <label>
+                    <span class="visually-hidden">Ваше имя*</span>
+                    <input type="text" class="form__text-input" placeholder="Ваше имя*">
+                </label>
+                <label>
+                    <span class="visually-hidden">Ваше отчество*</span>
+                    <input type="text" class="form__text-input" placeholder="Ваше отчество*">
+                </label>
+                <label>
+                    <span class="visually-hidden">Мобильный телефон*</span>
+                    <input type="text" class="form__text-input" placeholder="Мобильный телефон*">
+                </label>
+                <label>
+                    <span class="visually-hidden">E-mail*</span>
+                    <input type="text" class="form__text-input" placeholder="E-mail*">
+                </label>
+                <p class="form__footnotes">* Звездочкой отмечены поля, обязательные для заполнения.</p>
+            </div>
+            <div>
+                <input class="form__checkbox-input" type="checkbox" id="approval">
+                <label class="form__checkbox-label" for="approval">
+                    <span>Согласен(а) на обработку моих персональных данных</span>
+                </label>
+            </div>        
+            <button class="form__submit-button" type="submit">
+                отправить анкету
+            </button>
+        </form>
+    </main>    
+    <footer class="page-footer">
+  <a href="./index.html" class="page-footer__logo">
+    <picture>
+      <source srcset="assets/images/static/logo-white.webp">
+      <img src="assets/images/static/logo-white.png" alt="Логотип" width="45" height="35">
+    </picture>
+  </a>  
+  <nav class="page-footer__nav">
+    <ul class="page-footer__nav-list page-footer__nav-list--left-list">
+      <li class="page-footer__nav-item">
+         <a href="#" class="page-footer__nav-list-link">
+            Меню
+         </a>
+      </li>
+      <li class="page-footer__nav-item">
+         <a href="./cakes.html" class="page-footer__nav-list-link">
+            Целые торты
+         </a>
+      </li>
+   </ul>
+   <ul class="page-footer__nav-list">
+      <li class="page-footer__nav-item">
+         <a href="./loyalty.html" class="page-footer__nav-list-link">
+            Программа лояльности
+         </a>
+      </li>
+      <li class="page-footer__nav-item">
+         <a href="#" class="page-footer__nav-list-link">
+            Контакты
+         </a>
+      </li>
+   </ul>
+  </nav>
+  <ul class="page-footer__social">
+    <li>
+      <a href="#" class="page-footer__social-link">
+        <picture>
+          <source type="image/webp" srcset="assets/images/static/vkontakte-icon-white.webp">
+          <img src="assets/images/static/vkontakte-icon-white.png" alt="Вконтакте" width="20" height="20">
+        </picture> 
+      </a>
+    </li>
+    <li>
+      <a href="#" class="page-footer__social-link">
+        <picture>
+           <source type="image/webp" srcset="assets/images/static/instagram-icon-white.webp">
+           <img src="assets/images/static/instagram-icon-white.png" alt="Инстаграм" width="20" height="20">
+        </picture> 
+      </a>
+    </li>
+  </ul>
+  <a href="https://t-code.ru/" class="page-footer__copyright">
+    <span>Разработка</span>
+    <picture>
+      <source srcset="assets/images/static/dev-logo.webp">
+      <img src="assets/images/static/dev-logo.png" alt="true.code" width="69" height="14">
+    </picture>
+  </a>
+</footer>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

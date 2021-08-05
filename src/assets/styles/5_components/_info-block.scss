@@ -12,7 +12,7 @@
     content: "";
     position: absolute;
     top: 0;
-    bottom: 0;    
+    bottom: 0;
     width: 42px;
     height: 42px;
     margin: auto;
@@ -21,7 +21,7 @@
   }
 
   &::before {
-    left: -21px;   
+    left: -21px;
   }
 
   &::after {
@@ -40,14 +40,17 @@
   bottom: -15px;
   left: 0;
   right: 0;
+  display: block;
+  width: 110px;
   margin: auto;
   padding: 4px 20px;
-  font-family: "Lato";  
+  font-family: "Lato";
   background: $accent-color;
+  text-align: center;
   border: 0;
   border-radius: 14px;
   z-index: 20;
-  
+
   &:hover {
     opacity: 0.7
   }

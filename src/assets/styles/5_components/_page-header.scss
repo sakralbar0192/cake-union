@@ -1,7 +1,7 @@
 .page-header {
-   position: relative;  
-   margin: 0 0 5px;   
-   
+   position: relative;
+   margin: 0 0 5px;
+
    &--internal-page {
       background: $secondary-color;
 
@@ -15,7 +15,7 @@
 
       .page-header__social {
          display: none;
-      }      
+      }
 
       .page-header__menu {
          min-height: 85px;
@@ -23,12 +23,12 @@
 
       .page-header__menu-wrapper {
          padding: 0 0 5px;
-         
+
          &::before {
             background: url("assets/images/static/wavy-line-green.png") no-repeat  0px center;
             transform: rotate(180deg);
          }
-      }      
+      }
    }
 }
 
@@ -36,10 +36,10 @@
    position: absolute;
    top: 34px;
    left: 0;
-   right: 0;   
+   right: 0;
    width: 74px;
    height: 57px;
-   margin: auto; 
+   margin: auto;
    z-index: 11;
 
    &:hover {
@@ -64,7 +64,7 @@
    display: flex;
    align-items: center;
    justify-content: center;
-   min-height: 115px; 
+   min-height: 115px;
    margin: 0 0 10px;
 }
 
@@ -84,30 +84,27 @@
 }
 
 .page-header__nav {
-   display: flex;  
+   display: flex;
 }
 
 .page-header__nav-list {
    flex-basis: 50%;
-   display: flex;  
+   display: flex;
    flex-wrap: wrap;
-   justify-content: flex-end;  
+   justify-content: flex-end;
    margin: 5px 90px 0;
    transition: all 0.3s ease 0s;
-   
+
    &--right-list {
       justify-content: flex-start;
    }
-}
-
-.page-header__nav-item {
-   margin: 10px 15px;
 }
 
 .page-header__nav-list-link {
    @include fontStyleOne;
    box-sizing: border-box;
    display: block;
+   margin: 10px 15px;
    padding: 4px 8px;
    color: $primary-color;
    white-space: nowrap;
@@ -125,8 +122,8 @@
 .page-header__social {
    position: absolute;
    top: 55px;
-   right: 50px;  
-   display: flex;  
+   right: 50px;
+   display: flex;
 }
 
 .page-header__social-item {
@@ -147,10 +144,10 @@
    .page-header__logo {
       top: 35px;
       left: 50px;
-      margin: auto 0; 
+      margin: auto 0;
    }
 
-   .page-header__nav {     
+   .page-header__nav {
       margin: 20px 150px;
    }
 
@@ -225,7 +222,7 @@
             &::before,
             &::after {
                opacity: 0.7;
-            } 
+            }
          }
       }
 
@@ -240,25 +237,25 @@
    }
 
    .page-header__menu._active._open {
-      .page-header__menu-toggle { 
+      .page-header__menu-toggle {
          position: relative;
-         
+
 
          span {
             transform: scale(0) translate(0px, -50%);
          }
-      
+
          &::before {
             position: absolute;
             top: 50%;
             transform: rotate(-45deg) translate(0px, -50%);
          }
-      
+
          &::after {
             position: absolute;
             bottom: 50%;
             transform: rotate(45deg) translate(0px, 50%);
-         }         
+         }
       }
 
       .page-header__menu-wrapper {
@@ -305,7 +302,7 @@
             .page-header__social {
                display: none;
             }
-         }         
+         }
       }
    }
 }

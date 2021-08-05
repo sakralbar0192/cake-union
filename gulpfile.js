@@ -56,7 +56,7 @@ gulp.task('clean', () => {
 
 // HTML
 gulp.task("html", function() {
-  return gulp.src(config.src.html) 
+  return gulp.src(config.src.html)
     .pipe(plumber())
     .pipe(posthtml([
       include()
@@ -153,7 +153,7 @@ gulp.task('js', gulp.series('js:copy', 'js:plugins', 'js:components', function (
 // Images
 gulp.task("images:build", function () {
   return gulp
-    .src(config.src.img, { base: config.build.imgBase }) 
+    .src(config.src.img, { base: config.build.imgBase })
     .pipe(buffer())
     .pipe(imagemin([
       imagemin.gifsicle({interlaced: true}),
@@ -166,7 +166,7 @@ gulp.task("images:build", function () {
           ]
       })
     ]))
- 
+
     .pipe(gulp.dest(config.build.img))
     // .pipe(reload({stream: true}));
 });
@@ -175,7 +175,7 @@ gulp.task("images:clean", () => {
   return del(config.build.img);
 });
 
-gulp.task('images:watch', gulp.series('images:clean', function() { 
+gulp.task('images:watch', gulp.series('images:clean', function() {
   return gulp.series('images:build');
 }));
 
@@ -202,18 +202,17 @@ gulp.task("sprite:svg", function () {
     .pipe(svgstore({
       inlineSvg: true
     }))
-    .pipe(rename("sprite.html"))
+    .pipe(rename("sprite.php"))
     .pipe(gulp.dest(config.build.sprites))
     .pipe(reload({stream: true}));
 });
 
 gulp.task("php", function() {
-  return gulp.src(srcPath + "/php/**/*")
-    .pipe(plumber())
-    .pipe(gulp.dest(publicPath))
-    .pipe(server.stream());
+  return gulp.src(config.src.php)
+  .pipe(plumber())
+  .pipe(gulp.dest(config.build.php))
+  .pipe(server.stream());
 });
-
 
 gulp.task("fonts", function () {
   return gulp.src(config.src.fonts)
@@ -225,12 +224,13 @@ gulp.task("fonts:clean", function() {
   return del.sync(config.build.fonts);
 });
 
-gulp.task('fonts:watch', gulp.series('fonts:clean', function() { 
+gulp.task('fonts:watch', gulp.series('fonts:clean', function() {
   return gulp.series('fonts');
 }));
 
 gulp.task('watch', function() {
-  gulp.watch(config.watch.html, gulp.series('html')); 
+  gulp.watch(config.watch.html, gulp.series('html'));
+  gulp.watch(config.watch.php, gulp.series('php'));
   gulp.watch(config.watch.style, gulp.series('style'));
   gulp.watch(config.watch.js.components, gulp.series('js:components'));
   gulp.watch(config.watch.js.plugins, gulp.series('js:plugins'));
@@ -241,14 +241,14 @@ gulp.task('watch', function() {
 
 });
 
-gulp.task("build", 
+gulp.task("build",
   gulp.series(
     "clean",
     "sprite:svg",
     gulp.parallel(
       // "sprite:png",
       "html",
-      // "php",
+      "php",
       "style",
       "js",
       "images:build",
@@ -261,4 +261,3 @@ gulp.task("build",
     )
   )
 );
-

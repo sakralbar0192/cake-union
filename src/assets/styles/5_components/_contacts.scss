@@ -6,7 +6,7 @@
 
 .contacts__title {
   @include titleFontStyleOne;
-  margin: 0 0 58px;  
+  margin: 0 0 58px;
 }
 
 .contacts__wrapper {
@@ -18,7 +18,7 @@
 .contacts__info-block {
   display: flex;
   justify-content: flex-end;
-  flex-basis: 38%; 
+  flex-basis: 38%;
   background: $additional-color-three;
 }
 
@@ -39,8 +39,8 @@
   line-height: 31px;
   letter-spacing: -0.36px;
   color: $contact-primary-color;
-  
-  
+
+
   span {
     font-family: Verdana;
     font-weight: 400;
@@ -52,14 +52,16 @@
 }
 
 .contacts__social-links-wrapper {
+  display: flex;
   margin: 15px 0 0;
 }
 
 .contacts__social-link {
+  margin: 0 10px 0 0 ;
   &:hover {
     opacity: 0.3;
   }
-  
+
   &:active {
   opacity: 0.7;
   }
@@ -71,7 +73,7 @@
   align-items: center;
   justify-content: flex-start;
   flex-basis: 62%;
-  overflow: hidden;  
+  overflow: hidden;
 }
 
 .contacts__map {

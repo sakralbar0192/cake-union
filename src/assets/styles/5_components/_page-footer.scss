@@ -20,7 +20,7 @@
 }
 
 .page-footer__logo {
-  position: absolute;  
+  position: absolute;
   top: 43px;
   left: 0;
   right: 0;
@@ -38,7 +38,7 @@
 }
 
 .page-footer__social {
-  position: absolute;  
+  position: absolute;
   top: 50px;
   left: 0;
   right: 0;
@@ -78,12 +78,10 @@
   }
 }
 
-.page-footer__nav-item {
-  margin: 0 15px;
-}
-
 .page-footer__nav-list-link {
   @include fontStyleOne;
+  display: block;
+  margin: 0 15px;
   padding: 8px;
   color: $additional-color;
 
@@ -129,7 +127,7 @@
     margin: 0;
   }
 
-  .page-footer__nav-item {
+  .page-footer__nav-list-link {
     margin: 0;
   }
 
@@ -139,7 +137,7 @@
     margin: 0 0 10px 8px;
   }
 
-  .page-footer__copyright {    
+  .page-footer__copyright {
     width: 100%;
     padding: 10px 0 0;
     text-align: center;

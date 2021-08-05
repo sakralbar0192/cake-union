@@ -1,11 +1,11 @@
 .menu__main {
   width: 1170px;
   margin: 0 auto 106px;
-  padding: 50px 10px 90px;
+  padding: 50px 10px 20px;
 }
 
-.menu__title {  
-  margin: 0 20px 12px;  
+.menu__title {
+  margin: 0 20px 12px;
 }
 
 .menu__bread-crumbs {
@@ -20,17 +20,22 @@
 .menu__products {
   display: flex;
   flex-wrap: wrap;
+  flex-grow: 1;
   justify-content: flex-start;
-  max-width: 780px;
+  min-width: 790px;
+  padding: 0 0 70px;
 }
 
 @media (max-width: map-get($laptop, sm) - 1) {
   .menu__main {
+    box-sizing: border-box;
     width: 100%;
+    padding: 0 15px;
   }
 
   .menu__products {
     justify-content: center;
+    min-width: 0;
   }
 }
 

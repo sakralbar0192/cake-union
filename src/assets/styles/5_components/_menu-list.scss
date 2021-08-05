@@ -22,7 +22,7 @@
   &:hover {
     opacity: 0.7;
   }
-  
+
   &:active {
     opacity: 0.3;
   }
@@ -32,12 +32,12 @@
   }
 }
 
-.menu-list__list {  
+.menu-list__list {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   min-width: 375px;
-  padding: 0 70px 0 10px;
+  padding: 0 50px 0 10px;
   transition: all 0.3s ease 0s;
 }
 
@@ -54,7 +54,8 @@
   letter-spacing: -0.48px;
   color: $primary-color;
 
-  &:hover {
+  &:hover,
+  &--active {
     color: $secondary-color;
 
     &::after {
@@ -90,11 +91,11 @@
       .menu-list__toggle {
         display: flex;
       }
-  
+
       .menu-list__list {
         display: none;
       }
-  
+
       &._open {
         .menu-list__toggle {
           &::after {
